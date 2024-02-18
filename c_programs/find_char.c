@@ -1,24 +1,22 @@
+//Program to find a character in a given string
 #include<stdio.h>
-int find_char(char x[],char ch)
-{
-	for(int i=0;x[i]!='\0';i++)
-	{
-		if(x[i]==ch)
-			return i;
-	}
-	return -1;
-
-}
+#include"find_char_header.h"
 int main()
 {
-	char A[20]="c programming";
-	int pos;
-	pos=find_char(A,'z');
-
-	if(pos==-1)
-		printf("character is not found\n");
-	else
-		printf("character is  found at position :%d\n",pos);
+	char data[100],ch;
+	int position;
+	printf("Enter a string\n");
+	fgets(data,100,stdin);
+	printf("\n");
+	printf("Entered string is\n");
+	fputs(data,stdout);
+	printf("\n");
+	printf("Enter the character to be searched\n");
+	scanf("%c",&ch);
+	printf("\n");
+	position=pos_findchar(data,ch);
+	printf("\n");
+	printf("Character is present at::%d\n",position);
+	printf("\n");
+	return 0;
 }
-
-
